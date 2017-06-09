@@ -1,0 +1,25 @@
+nonAbiChangeInCommons {
+  tasks = ["assemble"]
+  apply-non-abi-change-to = "commons/src/main/java/org/gradle/test/performance/mediummonolithicjavaproject/p0/Production0.java"
+}
+
+abiChangeInCommons {
+  tasks = ["assemble"]
+  apply-abi-change-to = "commons/src/main/java/org/gradle/test/performance/mediummonolithicjavaproject/p0/Production0.java"
+}
+
+nonAbiChangeInApp {
+  tasks = ["assemble"]
+  apply-abi-change-to = "my-app/src/main/java/org/gradle/test/performance/mediummonolithicjavaproject/p100/Production0.java"
+}
+
+cleanBuild {
+  tasks = ["build"]
+  cleanup-tasks = ["clean"]
+}
+
+cachedCleanBuild {
+  tasks = ["build"]
+  cleanup-tasks = ["clean"]
+  gradle-args = ["--build-cache"]
+}

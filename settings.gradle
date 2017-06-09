@@ -1,1 +1,5 @@
 rootProject.name = 'analysing-gradle-performance'
+
+include 'commons'
+include 'my-lib'
+include 'my-app'
