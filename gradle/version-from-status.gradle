@@ -1,0 +1,13 @@
+//Mockup of a typical script that determines the current version from the output of a git command
+
+def out = new ByteArrayOutputStream()
+exec {
+  if (System.getProperty('os.name').contains('windows')) {
+    commandLine 'cmd', '/c', 'git', 'rev-parse', "HEAD"
+  } else {
+    commandLine 'git', 'status','rev-parse', "HEAD"
+  }
+  standardOutput = out
+}
+
+version = new String(out.toByteArray())
