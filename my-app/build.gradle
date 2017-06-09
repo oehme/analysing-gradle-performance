@@ -1,9 +1,10 @@
 dependencies {
   compile project(':my-lib')
+  testCompile project(path: ':my-lib', configuration: 'tests')
 
-  compile "org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE"
-  compile "org.springframework.boot:spring-boot-starter-jetty:1.5.2.RELEASE"
-  compile "org.springframework.boot:spring-boot-starter-actuator:1.5.2.RELEASE"
+  compile 'org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE'
+  compile 'org.springframework.boot:spring-boot-starter-jetty:1.5.2.RELEASE'
+  compile 'org.springframework.boot:spring-boot-starter-actuator:1.5.2.RELEASE'
 }
 
 task uberJar(type:Jar) {
@@ -17,7 +18,7 @@ artifacts {
 
 task projectStats() {
   doLast {
-    new File(buildDir, "stats.txt").text = "Source files: sourceSets.main.java.size()"
+    new File(buildDir, 'stats.txt').text = "Source files: ${sourceSets.main.java.size()}"
   }
 }
 assemble.dependsOn(projectStats)

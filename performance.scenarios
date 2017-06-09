@@ -18,7 +18,12 @@ abiChangeInCommons {
 
 nonAbiChangeInApp {
   tasks = ["assemble"]
-  apply-abi-change-to = "my-app/src/main/java/org/gradle/test/performance/mediummonolithicjavaproject/p100/Production0.java"
+  apply-abi-change-to = "my-app/src/main/java/org/gradle/test/performance/mediummonolithicjavaproject/p50/Production1000.java"
+}
+
+changingTestInLib {
+  tasks = ["test"]
+  apply-abi-change-to = "my-lib/src/test/java/org/gradle/test/performance/mediummonolithicjavaproject/p25/Test500.java"
 }
 
 cleanBuild {

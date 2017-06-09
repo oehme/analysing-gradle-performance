@@ -5,7 +5,7 @@ exec {
   if (System.getProperty('os.name').contains('windows')) {
     commandLine 'cmd', '/c', 'git', 'rev-parse', "HEAD"
   } else {
-    commandLine 'git', 'status','rev-parse', "HEAD"
+    commandLine 'git', 'rev-parse', "HEAD"
   }
   standardOutput = out
 }

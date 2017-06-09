@@ -1,3 +1,16 @@
 dependencies {
   compile project(':commons')
 }
+
+configurations {
+  tests.extendsFrom(testRuntime)
+}
+
+task testJar (type: Jar) {
+  from sourceSets.test.output
+  classifier 'tests'
+}
+
+artifacts {
+  tests testJar
+}
