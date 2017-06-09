@@ -2,6 +2,10 @@ configurationTime {
   tasks = ["help"]
 }
 
+upToDateBuild {
+  tasks = ["build"]
+}
+
 nonAbiChangeInCommons {
   tasks = ["assemble"]
   apply-non-abi-change-to = "commons/src/main/java/org/gradle/test/performance/mediummonolithicjavaproject/p0/Production0.java"

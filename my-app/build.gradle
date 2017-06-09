@@ -14,3 +14,10 @@ task uberJar(type:Jar) {
 artifacts {
   archives uberJar
 }
+
+task projectStats() {
+  doLast {
+    new File(buildDir, "stats.txt").text = "Source files: sourceSets.main.java.size()"
+  }
+}
+assemble.dependsOn(projectStats)
