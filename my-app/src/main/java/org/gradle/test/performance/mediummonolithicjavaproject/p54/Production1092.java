@@ -1,19 +1,8 @@
 package org.gradle.test.performance.mediummonolithicjavaproject.p54;
 
-import org.gradle.test.performance.mediummonolithicjavaproject.p18.Production363;
 import org.gradle.test.performance.mediummonolithicjavaproject.p36.Production727;
 
-public class Production1092 {        
-
-    private Production363 property0;
-
-    public Production363 getProperty0() {
-        return property0;
-    }
-
-    public void setProperty0(Production363 value) {
-        property0 = value;
-    }
+public class Production1092 {
 
     private Production727 property1;
 

@@ -1,20 +1,12 @@
 package org.gradle.test.performance.mediummonolithicjavaproject.p54;
 
-import org.gradle.test.performance.mediummonolithicjavaproject.p18.Production363;
 import org.gradle.test.performance.mediummonolithicjavaproject.p36.Production727;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class Test1092 {  
-    Production1092 objectUnderTest = new Production1092();     
-
-    @Test
-    public void testProperty0() {
-        Production363 value = new Production363();
-        objectUnderTest.setProperty0(value);
-        assertEquals(value, objectUnderTest.getProperty0());
-    }
+public class Test1092 {
+    Production1092 objectUnderTest = new Production1092();
 
     @Test
     public void testProperty1() {
