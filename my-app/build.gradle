@@ -1,3 +1,16 @@
 dependencies {
   compile project(':my-lib')
+
+  compile "org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE"
+  compile "org.springframework.boot:spring-boot-starter-jetty:1.5.2.RELEASE"
+  compile "org.springframework.boot:spring-boot-starter-actuator:1.5.2.RELEASE"
+}
+
+task uberJar(type:Jar) {
+  from sourceSets.main.output
+  from configurations.runtime.collect { it.directory ? it : zipTree(it) }
+}
+
+artifacts {
+  archives uberJar
 }
