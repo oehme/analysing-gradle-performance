@@ -1,0 +1,7 @@
+configurations {
+  apt
+}
+
+tasks.withType(JavaCompile) {
+  options.annotationProcessorPath = configurations.apt
+}
