@@ -11,3 +11,7 @@ exec {
 }
 
 version = new String(out.toByteArray())
+
+subprojects {
+  version = rootProject.version
+}

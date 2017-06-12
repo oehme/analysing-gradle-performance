@@ -8,12 +8,12 @@ buildScan {
 }
 
 apply from: "gradle/chuck-norris-fact.gradle"
+apply from: "$rootDir/gradle/version-from-status.gradle"
 
 subprojects {
   apply plugin: 'java'
   apply plugin: 'eclipse'
   apply plugin: 'idea'
-  apply from: "$rootDir/gradle/version-from-status.gradle"
 
   repositories {
       mavenCentral()
