@@ -1,16 +1,11 @@
-configurations.all {
-  resolutionStrategy {
-    cacheDynamicVersionsFor 0, 'seconds'
-  }
-}
-
 dependencies {
   compile project(':my-lib')
   testCompile project(path: ':my-lib', configuration: 'tests')
 
-  compile 'org.springframework.boot:spring-boot-starter-web:+'
-  compile 'org.springframework.boot:spring-boot-starter-jetty:+'
-  compile 'org.springframework.boot:spring-boot-starter-actuator:+'
+  def springVersion = '1.5.4.RELEASE'
+  compile "org.springframework.boot:spring-boot-starter-web:$springVersion"
+  compile "org.springframework.boot:spring-boot-starter-jetty:$springVersion"
+  compile "org.springframework.boot:spring-boot-starter-actuator:$springVersion"
 }
 
 task uberJar(type:Jar) {
