@@ -1,7 +1,12 @@
+plugins {
+  id 'java-library'
+}
+
 dependencies {
-  compile project(':commons')
-  compile 'org.apache.logging.log4j:log4j-api:2.8.2'
-  compile 'org.apache.logging.log4j:log4j-core:2.8.2'
+  api 'org.apache.logging.log4j:log4j-api:2.8.2'
+
+  implementation project(':commons')
+  implementation 'org.apache.logging.log4j:log4j-core:2.8.2'
 }
 
 configurations {

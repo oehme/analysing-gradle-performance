@@ -1,11 +1,11 @@
 dependencies {
-  compile project(':my-lib')
-  testCompile project(path: ':my-lib', configuration: 'tests')
+  implementation project(':my-lib')
+  testImplementation project(path: ':my-lib', configuration: 'test')
 
   def springVersion = '1.5.4.RELEASE'
-  compile "org.springframework.boot:spring-boot-starter-web:$springVersion"
-  compile "org.springframework.boot:spring-boot-starter-jetty:$springVersion"
-  compile "org.springframework.boot:spring-boot-starter-actuator:$springVersion"
+  implementation "org.springframework.boot:spring-boot-starter-web:$springVersion"
+  implementation "org.springframework.boot:spring-boot-starter-jetty:$springVersion"
+  implementation "org.springframework.boot:spring-boot-starter-actuator:$springVersion"
 }
 
 task uberJar(type:Jar) {
