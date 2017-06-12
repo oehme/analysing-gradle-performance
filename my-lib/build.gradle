@@ -8,16 +8,3 @@ dependencies {
   implementation project(':commons')
   implementation 'org.apache.logging.log4j:log4j-core:2.8.2'
 }
-
-configurations {
-  tests.extendsFrom(testRuntime)
-}
-
-task testJar (type: Jar) {
-  from sourceSets.test.output
-  classifier 'tests'
-}
-
-artifacts {
-  tests testJar
-}

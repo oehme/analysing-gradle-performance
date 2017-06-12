@@ -14,6 +14,7 @@ apply from: "$rootDir/gradle/version-from-status.gradle"
 
 subprojects {
   apply plugin: 'java'
+  apply from: "$rootDir/gradle/test-fixtures.gradle"
   apply plugin: 'eclipse'
   apply plugin: 'idea'
 

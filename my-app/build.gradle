@@ -1,6 +1,6 @@
 dependencies {
   implementation project(':my-lib')
-  testImplementation project(path: ':my-lib', configuration: 'test')
+  testImplementation project(path: ':my-lib', configuration: 'testFixtures')
 
   def springVersion = '1.5.4.RELEASE'
   implementation "org.springframework.boot:spring-boot-starter-web:$springVersion"

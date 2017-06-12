@@ -1,0 +1,31 @@
+sourceSets {
+  testFixtures {
+    java.srcDir "src/testFixtures/java"
+    compileClasspath += sourceSets.main.output
+    runtimeClasspath += sourceSets.main.output
+  }
+  test {
+    compileClasspath += testFixtures.output
+    runtimeClasspath += testFixtures.output
+  }
+}
+
+configurations {
+  testFixturesImplementation.extendsFrom(implementation)
+  testImplementation.extendsFrom(testFixturesImplementation)
+  testFixturesRuntimeOnly.extendsFrom(runtimeOnly)
+  testRuntimeOnly.extendsFrom(testFixturesRuntimeOnly)
+
+  testFixtures {
+    extendsFrom testFixturesRuntimeOnly
+  }
+}
+
+task testFixturesJar(type: Jar) {
+  from sourceSets.testFixtures.output
+  classifier = "testFixtures"
+}
+
+artifacts {
+  testFixtures testFixturesJar
+}
