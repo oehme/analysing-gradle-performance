@@ -5,4 +5,5 @@ configurations {
 tasks.withType(JavaCompile) {
   options.annotationProcessorPath = configurations.apt
   options.incremental = true
+  options.fork = true
 }
