@@ -32,4 +32,9 @@ subprojects {
       attributes 'Build-Time': ci ? new Date() : new Date(0)
     }
   }
+
+  test {
+    maxParallelForks = gradle.startParameter.maxWorkerCount
+    forkEvery = 10000
+  }
 }
