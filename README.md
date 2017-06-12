@@ -1,6 +1,6 @@
 # analysing-gradle-performance
 
-This project shows a large variety of performance issues that a user could accidentally introduce into a build. The [`after`](https://github.com/oehme/analysing-gradle-performance/tree/after) branch shows how this project should look like to do as little work as possible and make the best use of the system's resources. It is orders of magnitudes faster than the version on the [`before`](https://github.com/oehme/analysing-gradle-performance/tree/before) branch.
+This project shows a large variety of performance issues that a user could accidentally introduce into a build. The [`after`](https://github.com/oehme/analysing-gradle-performance/tree/after) branch shows how this project should look like to do as little work as possible and make the best use of the system's resources. It is an order of magnitude faster than the version on the [`before`](https://github.com/oehme/analysing-gradle-performance/tree/before) branch.
 
 You can use the [Gradle profiler](https://github.com/gradle/gradle-profiler) to run all the performance scenarios using a simple command:
 
