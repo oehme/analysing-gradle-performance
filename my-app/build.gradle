@@ -23,6 +23,8 @@ artifacts {
 }
 
 task projectStats() {
-    new File(buildDir, 'stats.txt').text = "Source files: ${sourceSets.main.java.size()}"
+  def statsFile = new File(buildDir, 'stats.txt')
+  statsFile.parentFile.mkdirs()
+  statsFile.text = "Source files: ${sourceSets.main.java.size()}"
 }
 assemble.dependsOn(projectStats)
