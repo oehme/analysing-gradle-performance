@@ -7,8 +7,10 @@ buildScan {
   licenseAgree = 'yes'
 }
 
+apply from: "$rootDir/gradle/environment.gradle"
 apply from: "gradle/chuck-norris-fact.gradle"
 apply from: "$rootDir/gradle/version-from-status.gradle"
+
 
 subprojects {
   apply plugin: 'java'
@@ -25,7 +27,7 @@ subprojects {
 
   jar {
     manifest {
-      attributes 'Build-Time': new Date()
+      attributes 'Build-Time': ci ? new Date() : new Date(0)
     }
   }
 }

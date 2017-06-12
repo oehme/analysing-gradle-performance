@@ -1,0 +1,1 @@
+ext.ci = System.getenv("CI")

@@ -12,6 +12,7 @@ task uberJar(type:Jar) {
   inputs.files configurations.runtime
   from sourceSets.main.output
   from { configurations.runtime.collect { it.directory ? it : zipTree(it) } }
+  classifier "uber-jar"
 }
 
 artifacts {
