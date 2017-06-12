@@ -14,8 +14,9 @@ dependencies {
 }
 
 task uberJar(type:Jar) {
+  inputs.files configurations.runtime
   from sourceSets.main.output
-  from configurations.runtime.collect { it.directory ? it : zipTree(it) }
+  from { configurations.runtime.collect { it.directory ? it : zipTree(it) } }
 }
 
 artifacts {
