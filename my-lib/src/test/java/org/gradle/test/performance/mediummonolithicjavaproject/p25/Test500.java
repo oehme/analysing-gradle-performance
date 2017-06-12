@@ -1,13 +1,15 @@
 package org.gradle.test.performance.mediummonolithicjavaproject.p25;
 
 import org.junit.Test;
+import org.gradle.test.performance.mediummonolithicjavaproject.util.TestUtil;
 import static org.junit.Assert.*;
 
-public class Test500 {  
-    Production500 objectUnderTest = new Production500();     
+public class Test500 {
+    Production500 objectUnderTest = new Production500();
 
     @Test
     public void testProperty0() {
+        new TestUtil().foo();
         String value = "value";
         objectUnderTest.setProperty0(value);
         assertEquals(value, objectUnderTest.getProperty0());
