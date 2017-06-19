@@ -8,6 +8,7 @@ exec {
     commandLine 'git', 'rev-parse', "HEAD"
   }
   standardOutput = out
+  workingDir = rootDir
 }
 
 version = new String(out.toByteArray())
