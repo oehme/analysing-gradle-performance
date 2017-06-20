@@ -1,5 +1,5 @@
 build
 .DS_Store
 .gradle
-user-home
+gradle-user-home
 profile-out*
